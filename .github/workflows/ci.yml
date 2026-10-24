@@ -1,0 +1,17 @@
+   name: ci
+   on:
+     pull_request:
+       branches: [main]
+   jobs:
+     backend:
+       runs-on: ubuntu-latest
+       defaults: { run: { working-directory: backend } }
+       steps:
+         - uses: actions/checkout@v7
+         - uses: actions/setup-python@v7
+           with: { python-version: "3.13" }
+         # TODO: zainstaluj zależności
+         # TODO: ruff check .
+         # TODO: pytest
+     frontend:
+       # TODO: setup-node@v7 (Node 24), npm ci, eslint, vitest
