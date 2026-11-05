@@ -1,0 +1,20 @@
+[project]
+name = "learningtracker-backend"
+version = "0.1.0"
+description = "API LearningTracker (FastAPI)"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
