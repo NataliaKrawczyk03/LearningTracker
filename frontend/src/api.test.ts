@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { getHealth } from './api.js'
+import { getHealth } from './api'
 
 describe('getHealth', () => {
   it('zwraca status z API', async () => {
