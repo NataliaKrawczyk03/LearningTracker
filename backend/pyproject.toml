@@ -5,6 +5,7 @@ description = "API LearningTracker (FastAPI)"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi",
+    "pydantic-settings",
     "uvicorn",
 ]
 

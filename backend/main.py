@@ -1,14 +1,4 @@
-from fastapi import FastAPI
+# Entry point for Vercel and `uvicorn main:app`.
+from app.main import app
 
-app = FastAPI(title="LearningTracker API")
-
-
-@app.get("/")
-def root():
-    return {"message": "hello world"}
-
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}
-
+__all__ = ["app"]
