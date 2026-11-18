@@ -1,6 +1,9 @@
-import { getHealth } from './api.js'
+import { getHealth } from './api'
 
-const app = document.querySelector('#app')
+const app = document.querySelector<HTMLDivElement>('#app')
+if (!app) {
+  throw new Error('Missing #app element in index.html')
+}
 
 app.innerHTML = `
   <h1>LearningTracker</h1>
@@ -8,7 +11,7 @@ app.innerHTML = `
   <p id="status">Sprawdzam API...</p>
 `
 
-const status = document.querySelector('#status')
+const status = app.querySelector<HTMLParagraphElement>('#status')!
 
 getHealth()
   .then((data) => {
